@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Event</title>
+</head>
+<body>
+
+    <main>
+        <h1>Bubble Kahini</h1>
+        <section id="section-area">
+            <h4>Bubble List</h4>
+            <ul id="list-container">
+                <li class="item">Bubble list 1</li>
+                <li id="second-item" class="item">Bubble list 2</li>
+                <li class="item">Bubble list 3</li>
+                <li class="item">Bubble list 4</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        // li
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('li clicked');
+            event.stopPropagation();
+        });
+        // ul
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('ul clicked');
+        });
+        // section
+        document.getElementById('section-area').addEventListener('click', function () {
+            console.log('section clicked');
+        });
+    </script>
+</body>
+</html>
