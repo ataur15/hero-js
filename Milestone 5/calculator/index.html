@@ -55,12 +55,28 @@
 
             // Get value of any button clicked and display to the screen
             buttons.forEach((button) => {
-                button.addEventListener('click', () => {
+                button.addEventListener('click', (e) => {
+                    // push in an empty array
                     realTimeScreenValue.push(button.value);
+                    // display to the div
+                    currentInput.innerHTML = realTimeScreenValue.join('');
+
+                    // To evaluate answer in real time
+                    if (button.classList.contains('num_btn')) {
+                        let joining = realTimeScreenValue.join('');
+                        answerScreen.innerHTML = eval(joining);
+                        // console.log(joining);
+                    }
+
+                    // When erase button is clicked
+                    /* if (button.id.match('erase')) {
+                        realTimeScreenValue.pop();
+                        console.log(realTimeScreenValue);
+                    } */
                 });
             });
 
-            console.log(realTimeScreenValue);
+
 
         </script>
 
