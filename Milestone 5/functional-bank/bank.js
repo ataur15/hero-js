@@ -10,7 +10,7 @@ let previousBalance = document.getElementById('total-balance');
  * Functions
  */
 
-// Current Amount for deposit and withdraw
+// Current Amount of deposit and withdraw
 function getInputId (inputId) {
     let inputField = document.getElementById(inputId);
     let currentAmount = parseFloat(inputField.value);
@@ -38,6 +38,10 @@ function updateBalance (amount, isAdd) {
         previousBalance.innerText = totalBalance;
     }
 }
+
+/**
+ * Event listener
+ */
 
 // Deposit button handler
 depositBtn.addEventListener('click', function() {

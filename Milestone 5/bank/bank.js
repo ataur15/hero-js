@@ -14,7 +14,7 @@ let withdrawInput = document.getElementById('withdraw-input');
 let withdrawBtn = document.getElementById('withdraw-button');
 
 /**
- * Functions
+ * Event listener
  */
 
 // Login Submit button handler

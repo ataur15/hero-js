@@ -1,3 +1,7 @@
+/**
+ * Functions
+ */
+
 // Quantity and price Update
 function updateProduct(product, price, isIncreasing) {
     // Update quantity
@@ -15,31 +19,36 @@ function updateProduct(product, price, isIncreasing) {
     let updatePrice = document.getElementById(product + '-total');
     updatePrice.innerText = quantity * price;
 
-    // Calculate Total
+    // Call calculateTotal function
     calculateTotal();
 
 }
 
-// Total Price
+// Get Inupt Value
 function getInputValue (product) {
     let productInput = document.getElementById(product + '-input');
-    let productNumber = parseInt(productInput.value);
-    return productNumber;
+    let productQuantity = parseInt(productInput.value);
+    return productQuantity;
 }
 
+// Calculate Total Price
 function calculateTotal () {
     let phoneTotal = getInputValue('phone') * 100;
     let caseTotal = getInputValue('case') * 50;
+
     let subTotal = phoneTotal + caseTotal;
     let tax = subTotal / 10;
     let totalPrice = subTotal + tax;
 
-    // Assign value to the html
+    // Assigning value to the html
     document.getElementById('subtotal').innerText = subTotal;
     document.getElementById('tax-amount').innerText = tax;
     document.getElementById('total-price').innerText = totalPrice;
-
 }
+
+/**
+ * Event Listener
+ */
 
 // Phone Plus
 document.getElementById('phone-plus').addEventListener('click', function () {

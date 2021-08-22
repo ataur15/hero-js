@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players</title>
+    <style>
+        /* #container .player:first-child {
+            background-color: burlywood;
+        } */
+    </style>
+</head>
+<body>
+    <header><h1>Players</h1></header>
+    <main>
+        <section id="container">
+            <div class="player">
+                <h4 class="player-name">Player-1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias error at dolore? Ut nobis vero quaerat, commodi rem aut tempore expedita iure minima soluta voluptas reiciendis est voluptatibus, asperiores, similique natus dolores a quis error neque! Dignissimos obcaecati, ipsum incidunt officiis consectetur magni ut distinctio temporibus hic, repellendus cupiditate officia? Fuga ex, mollitia pariatur voluptatibus delectus beatae assumenda fugiat dicta nulla numquam enim, saepe nemo dolorem repellat eligendi. Dolor eveniet, soluta quae tenetur magnam dolorem quisquam dicta. Culpa porro pariatur alias adipisci tenetur tempora sapiente dolorum fugiat doloremque, repudiandae eius aliquam, ipsa placeat aspernatur ducimus quis consequatur. Sapiente, soluta ducimus.</p>
+            </div>
+            <div class="player">
+                <h4 class="player-name">Player-2</h4>
+                <p>Saepe asperiores reprehenderit aperiam doloremque, adipisci possimus obcaecati est magnam, maiores architecto harum quidem, blanditiis odio debitis impedit consectetur deleniti dolorem commodi tempore doloribus sit aspernatur facere quia! Repudiandae eos soluta perferendis illo, recusandae, eveniet, culpa sequi nostrum exercitationem similique mollitia temporibus? Dolores quas reiciendis quae neque a pariatur exercitationem et, perferendis, odit temporibus culpa atque, eius blanditiis accusantium veritatis. Doloremque aut nostrum ratione quia voluptas cum delectus aliquam, et quas exercitationem dolorem maiores cumque in rerum, voluptatibus totam nisi tempora dolor ducimus iusto quos suscipit? In quod accusamus laborum beatae, quisquam explicabo aperiam sapiente commodi, reiciendis illo, repellendus perferendis.</p>
+            </div>
+            <div class="player">
+                <h4 class="player-name">Player-3</h4>
+                <p>Qui voluptates dolor nihil doloribus quasi sequi natus perspiciatis impedit ex? Quidem et facere rem. Dolore animi natus libero debitis ratione aliquid nobis vero odio facilis quos hic, beatae numquam eveniet. Cumque doloremque eaque aspernatur sed veritatis ratione cupiditate repellendus, excepturi natus sequi nulla quos corrupti ea libero provident suscipit! Quibusdam distinctio quaerat illum ut laborum impedit, consequuntur porro, dolorem dolorum natus dignissimos delectus dolore aliquid optio hic! Esse provident, necessitatibus in error libero dicta natus? Iusto eius vitae quos ad inventore qui. Unde optio corrupti sunt repellendus doloribus quaerat quidem eligendi quis a facilis omnis, consequatur vel amet eos!</p>
+            </div>
+        </section>
+        <button class="add-player" onclick="addPlayer()">Add Player</button>
+    </main>
+
+    <script>
+
+        // Style Add
+        function setPlayerStyle (player) {
+            player.style.border = "1px solid green";
+            player.style.padding = "15px";
+            player.style.margin = "15px";
+            player.style.borderRadius = "15px";
+        }
+
+        const players = document.getElementsByClassName('player');
+        for (const player of players) {
+            // call function
+            setPlayerStyle(player);
+        }
+
+        // document.querySelector('#container .player:first-child').style.backgroundColor = "lightpink";
+
+        // Add new player
+        function addPlayer () {
+            let div = document.createElement('div');
+            div.classList.add('player');
+            div.innerHTML = `
+                <h4 class="player-name">New Player</h4>
+                <p>Perspiciatis ab nobis, dolore harum iusto sint ad veniam placeat enim neque, voluptate optio tempora vero vel! Eligendi incidunt, maiores nobis quis commodi at id molestiae in non aliquam asperiores. Quisquam quaerat ex suscipit quibusdam at velit modi, expedita aut! Eaque eius aut ut, rem, iusto tempora commodi corrupti laborum natus repellat nobis veritatis aspernatur dolores nostrum similique. Odio sapiente voluptates vero laudantium et natus aliquam sunt esse animi ipsum, porro fuga nobis maxime sit cupiditate, eaque soluta blanditiis? Minima blanditiis deleniti vel quod eaque quos incidunt omnis corporis adipisci id aliquam alias reiciendis quo dolores saepe, esse, pariatur sint!</p>
+            `;
+            let playerContainer = document.getElementById('container');
+            playerContainer.appendChild(div);
+
+            // call function
+            setPlayerStyle(div);
+        }
+
+        // Event Bubbling
+        document.getElementById('container').addEventListener('click', function (event) {
+            // console.log(event.target.tagName.toLowerCase());
+
+            if (event.target.tagName.toLowerCase() == 'div') {
+                event.target.style.backgroundColor = "burlywood";
+            }else {
+                event.target.parentNode.style.backgroundColor = "burlywood";
+                // console.log(event.target.parentNode);
+            }
+        });
+    </script>
+</body>
+</html>
