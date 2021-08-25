@@ -21,8 +21,8 @@
                 <button type="button" class="fun_btn" id="erase" value="">
                     &#11013;
                 </button>
-                <button type="button" class="fun_btn" value="/">/</button>
                 <button type="button" class="fun_btn" value="%">%</button>
+                <button type="button" class="fun_btn" value="/">/</button>
                 <button type="button" class="num_btn" value="7">7</button>
                 <button type="button" class="num_btn" value="8">8</button>
                 <button type="button" class="num_btn" value="9">9</button>
@@ -41,45 +41,7 @@
                 <button type="button" class="fun_btn" id="evaluate" value="">=</button>
             </section>
         </div>
-        <script>
-            // Selectors
-            let currentInput = document.querySelector('.currentInput');
-            let answerScreen = document.querySelector('.answerScreen');
-            let buttons = document.querySelectorAll('button');
-            let clearbtn = document.querySelector('#clear');
-            let erasebtn = document.querySelector('#erase');
-            let evaluate = document.querySelector('#evaluate');
-
-            // Calculator Display
-            let realTimeScreenValue = [];
-
-            // Get value of any button clicked and display to the screen
-            buttons.forEach((button) => {
-                button.addEventListener('click', (e) => {
-                    // push in an empty array
-                    realTimeScreenValue.push(button.value);
-                    // display to the div
-                    currentInput.innerHTML = realTimeScreenValue.join('');
-
-                    // To evaluate answer in real time
-                    if (button.classList.contains('num_btn')) {
-                        let joining = realTimeScreenValue.join('');
-                        answerScreen.innerHTML = eval(joining);
-                        // console.log(joining);
-                    }
-
-                    // When erase button is clicked
-                    /* if (button.id.match('erase')) {
-                        realTimeScreenValue.pop();
-                        console.log(realTimeScreenValue);
-                    } */
-                });
-            });
-
-
-
-        </script>
-
+        <script></script>
         <script src="calculator.js"></script>
     </body>
 </html>
