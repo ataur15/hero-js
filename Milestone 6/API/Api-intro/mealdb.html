@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mealdb</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <main>
+            <div class="container">
+                <h2 class="text-center my-5">Search your favourite food</h2>
+                <div class="col-md-6 mx-auto mb-5">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="search-field" placeholder="Search here..."
+                            aria-label="Search food...." aria-describedby="button-addon2">
+                        <button onclick="searchFood()" class="btn btn-outline-secondary" type="button"
+                            id="button-search">Search</button>
+                    </div>
+                    <div id="error" style="color: red;"></div>
+                </div>
+                <div id="display-food" class="row row-cols-1 row-cols-md-4 g-4">
+                </div>
+            </div>
+        </main>
+
+        <script src="js/mealdb.js"></script>
+    </body>
+
+</html>
