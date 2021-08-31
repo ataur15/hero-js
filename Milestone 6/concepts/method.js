@@ -1,12 +1,12 @@
 const students = {
     name: "Jasim",
     id: 15,
-    majon: "mathmetics",
+    major: "mathmetics",
     isRich: false,
     subject: [ "english", "economics", "calculus" ],
     bestFriend: {
         name: "Kasem",
-        majon: "physics"
+        major: "physics"
     },
     takeExam: function () {
         console.log(this.name, 'taking exam');

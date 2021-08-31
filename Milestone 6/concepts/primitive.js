@@ -20,7 +20,7 @@ a = "Gello";
 // console.log(a, b); // Gello Hello
 
 
-let x = {job: "web developer"}
+let x = { job: "web developer" }
 let y = x;
 console.log(x, y);
 x.job = "frontend developer";
