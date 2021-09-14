@@ -1,4 +1,3 @@
-
 /**
  * object with property (string, boolean, number, object, array, method which will return a property value)
  */

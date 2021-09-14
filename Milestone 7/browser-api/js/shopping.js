@@ -10,7 +10,7 @@ const addItem = () => {
     }
     // display product
     displayProduct(itemName);
-    // add product to localstorage
+    // add product to the localstorage
     addProductToCart(itemName);
     // clear data
     inputField.value = "";
