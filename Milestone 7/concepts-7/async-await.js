@@ -15,7 +15,7 @@ const meeting = new Promise((resolve, reject) => {
 
 async function myMeeting () {
     try {
-        const meetingDetails = await meeting;
+        const meetingDetails = await meeting; // Waiting for meeting promise finish
         console.log(meetingDetails);
     }
     catch (error) {
