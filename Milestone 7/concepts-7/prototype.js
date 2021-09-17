@@ -1,4 +1,4 @@
-// Constructor function becuase ei function diye amra object create korte pari
+// Constructor function theke amra object create korte pari
 function Human (name, age, city) {
     // Child object
     /*
@@ -32,6 +32,9 @@ Human.prototype = {
         console.log(`Person is playing`);
     }
 }
+
+/* const sakib = Human('Sakib', 35, 'Dhaka');
+sakib.play(); */
 
 // Create a new object from Human object/function
 const sakib = new Human('Sakib', 35, 'Dhaka');
