@@ -9,7 +9,7 @@ const students = [
     { name: "Malek", age: 22, id: 3 }
 ]
 
-function school (param) {
+function school(param) {
     let emptyArray = [];
     for (const object of param) {
         let container = "";
@@ -37,7 +37,7 @@ const products = [
     { productName: "microphone", productId: "m70", stock: "100" }
 ]
 
-function onlineShop (items, productname) {
+function onlineShop(items, productname) {
     let products = [];
     for (let object of items) {
         for (let property in object) {
@@ -72,7 +72,7 @@ const orderList = [
     },
     {
         customerName: 'mukbul',
-        productName: 'Samsung watch',
+        productName: 'Smart watch',
         quantity: 2,
         date: "11-7-2021"
     },
@@ -84,13 +84,13 @@ const orderList = [
     },
     {
         customerName: 'asif',
-        productName: 'I Phone 10',
+        productName: 'iPhone 10',
         quantity: 1,
         date: "10-7-2021"
     },
 ]
 
-function orderDate (date) {
+function orderDate(date) {
     const orders = [];
     for (const object of orderList) {
         for (const property in object) {
