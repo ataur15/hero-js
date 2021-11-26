@@ -24,5 +24,5 @@ const displayWeather = (data) => {
     const imgIcon = document.getElementById('icon');
     imgIcon.setAttribute('src', url);
 
-    console.log(data);
+    // console.log(data);
 }
