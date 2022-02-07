@@ -1,3 +1,6 @@
+/**
+ * find the cheapest phone
+ */
 let phones = [
     {
         model: 'oppo t5',
@@ -25,7 +28,7 @@ let phones = [
     },
 ]
 
-function cheapestPhone () {
+function cheapestPhone() {
     let cheapest = phones[0];
     for (let phone of phones) {
         if (phone.price < cheapest.price) {

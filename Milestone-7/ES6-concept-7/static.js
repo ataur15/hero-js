@@ -1,15 +1,15 @@
 class Player {
-    constructor (name) {
+    constructor(name) {
         this.name = name;
     }
 
-    // normal method
-    eat () {
+    // Normal method
+    eat() {
         console.log(`${this.name} is eating`);
     }
 
-    // static method
-    static play () {
+    // Static method
+    static play() {
         console.log(`I am static method`);
     }
 }
@@ -17,5 +17,5 @@ class Player {
 let sakib = new Player('Sakib');
 sakib.eat();
 
-// direct access to the function
+// Direct access to the function
 Player.play();

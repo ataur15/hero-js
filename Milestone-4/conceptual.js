@@ -37,11 +37,11 @@ const products = [
     { productName: "microphone", productId: "m70", stock: "100" }
 ]
 
-function onlineShop(items, productname) {
+function onlineShop(items, pname) {
     let products = [];
     for (let object of items) {
         for (let property in object) {
-            if (property == "productName" && object[property] != productname) {
+            if (property == "productName" && object[property] != pname) {
                 products.push(object);
             }
         }

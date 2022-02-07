@@ -1,3 +1,9 @@
+// Implicit binding
+// Explicit binding
+// New binding
+// Window binding
+
+
 /**
  * Implicit binding (this kake point korche ta bujhar ekta sohoj way hocceh Implicit binding)
  * jei jaygay function ta call hoyeche and . notation er agee immediate jeita ache setai hocce this
@@ -13,7 +19,7 @@ const sakib = {
 
 sakib.printPlayerName();
 
-const person = function (name, age) {
+const Person = function (name, age) {
     return {
         name: name,
         age: age,
@@ -30,7 +36,7 @@ const person = function (name, age) {
     }
 }
 
-const tamim = person('Tamim Iqbal', 36);
+const tamim = Person('Tamim Iqbal', 36);
 tamim.printName();
 tamim.father.printName();
 
@@ -42,7 +48,7 @@ tamim.father.printName();
  */
 
 let printName = function (v1, v2) {
-    console.log(`${this.name} is ${v1} and ${v2}`);
+    console.log(`${this.name} is a ${v1} and ${v2}`);
 }
 
 let mashrafe = {
@@ -50,10 +56,7 @@ let mashrafe = {
     age: 38
 }
 
-let v1 = "Handsome";
-let v2 = "Best Captain";
-
-printName.call(mashrafe, v1, v2);
-printName.apply(mashrafe, [v1, v2]);
-const newFunction = printName.bind(mashrafe, v1, v2);
+printName.call(mashrafe, 'Cricketer', 'Captain');
+printName.apply(mashrafe, ['Cricketer', 'Bowler']);
+const newFunction = printName.bind(mashrafe, 'Cricketer', 'Good man');
 newFunction();

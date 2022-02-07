@@ -1,23 +1,24 @@
 // Parent Class
 class Person {
-    constructor () {
+    constructor() {
         this.name = "Sakib";
         this.age = 35;
     }
-    play () {
+    play() {
         console.log(`${this.name} is playing`);
     }
 }
 
 // Child Class
 class Cricketer extends Person {
-    constructor () {
+    constructor() {
         super();
         this.type = "All rounder";
         this.country = "Bangladesh";
     }
 
-    play () {
+    // Modified the play method
+    play() {
         console.log(`${this.name} is playing cricket`);
     }
 }
